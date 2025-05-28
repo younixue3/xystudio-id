@@ -1,14 +1,16 @@
 ---
-import LandingPage from "../components/LandingPage.vue";
-import "../styles/global.css";
+import Master from '../components/svelte/layout/Master.svelte';
+import Banner from '../components/vue/page/landing-page/Banner.vue';
+import Gallery from '../components/vue/page/landing-page/Gallery.vue';
+import Services from '../components/vue/page/landing-page/Services.vue';
+import ContactUs from '../components/svelte/page/landing-page/ContactUs.svelte';
+import '../styles/global.css';
+import Layout from '../components/Layout.astro';
 ---
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Astro + Vue Landing Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
-    <LandingPage client:load />
-  </body>
-</html>
+
+<Layout>
+  <Banner client:load />
+  <Services client:load />
+  <Gallery client:load />
+  <ContactUs client:load />
+</Layout>

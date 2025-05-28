@@ -1,0 +1,25 @@
+---
+import Layout from '../components/Layout.astro';
+import CreateBlog from '../components/vue/page/blog/CreateBlog.vue';
+import TableBlog from '../components/vue/page/blog/TableBlog.vue';
+import '../styles/global.css';
+
+// Define page metadata
+export const prerender = true;
+---
+
+<Layout level="admin" title="Blog Management">
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-8">Blog Management</h1>
+
+    <div class="space-y-8">
+      <section class="bg-white rounded-lg shadow-md p-6">
+        <CreateBlog client:load />
+      </section>
+
+      <section class="bg-white rounded-lg shadow-md p-6">
+        <TableBlog client:load />
+      </section>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,9 @@
+---
+import Layout from '../components/Layout.astro';
+import DashboardSection from '../components/vue/page/dashboard/DashboardSection.vue';
+import '../styles/global.css';
+---
+
+<Layout level="admin">
+  <DashboardSection client:only />
+</Layout>
